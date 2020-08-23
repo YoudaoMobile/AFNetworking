@@ -15,6 +15,8 @@ parameters:(nullable id)parameters
   progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgress
    success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure {
+    NSAssert(headers==nil, @"没有实现哟~");
+    NSAssert(parameters==nil, @"没有实现哟~");
     return [self GET:URLString parameters:parameters success:success failure:failure];
 }
 
@@ -24,6 +26,8 @@ parameters:(nullable id)parameters
   progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
    success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                 failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure {
+    NSAssert(headers==nil, @"没有实现哟~");
+    NSAssert(parameters==nil, @"没有实现哟~");
     return [self POST:URLString parameters:parameters success:success failure:failure];
 }
 
@@ -31,8 +35,8 @@ parameters:(nullable id)parameters
    uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgressBlock
  downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
                             completionHandler:(nullable void (^)(NSURLResponse *response, id _Nullable responseObject,  NSError * _Nullable error))completionHandler {
-    NSAssert(uploadProgressBlock==nil, @"兼容af4没有实现哟~");
-    NSAssert(downloadProgressBlock==nil, @"兼容af4没有实现哟~");
+    NSAssert(uploadProgressBlock==nil, @"没有实现哟~");
+    NSAssert(downloadProgressBlock==nil, @"没有实现哟~");
     return [self dataTaskWithRequest:request completionHandler:completionHandler];
 }
 
