@@ -41,6 +41,7 @@
        TARGET_OS_WATCH )
     #import "AFURLSessionManager.h"
     #import "AFHTTPSessionManager.h"
+    #import "AFHTTPSessionManager+FollowAF4.h"
 #endif
 
 #endif /* _AFNETWORKING_ */
