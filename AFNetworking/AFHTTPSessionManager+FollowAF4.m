@@ -16,7 +16,7 @@ parameters:(nullable id)parameters
    success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure {
     NSAssert(headers==nil, @"没有实现哟~");
-    NSAssert(parameters==nil, @"没有实现哟~");
+    NSAssert(downloadProgress==nil, @"没有实现哟~");
     return [self GET:URLString parameters:parameters success:success failure:failure];
 }
 
